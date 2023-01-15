@@ -1,0 +1,26 @@
+plugins {
+    id "java"
+}
+
+group 'pregen.code'
+version '1.0'
+
+java {
+    sourceCompatibility = 16
+    targetCompatibility = 16
+}
+
+configurations.all { resolutionStrategy.cacheChangingModulesFor 0, 'seconds' }
+
+repositories {
+    mavenCentral()
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    maven { url "https://repo.codemc.io/repository/maven-public/" }
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:3.0.13'
+    compileOnly 'org.spigotmc:spigot-api:1.19.2-R0.1-SNAPSHOT'
+    compileOnly 'org.popcraft:chunky-common:1.3.38'
+}

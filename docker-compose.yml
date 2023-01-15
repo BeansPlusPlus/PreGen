@@ -1,0 +1,17 @@
+version: "3.3"
+
+services:
+  pregen-test:
+    image: itzg/minecraft-server
+    restart: always
+    ports:
+      - 25565:25565
+    environment:
+      TYPE: PAPER
+      EULA: "TRUE"
+      MEMORY: 2000M
+      VERSION: 1.19.2
+    volumes:
+      #- ./minecraft-data:/data
+      - ./Chunky-1.3.52.jar:/data/plugins/Chunky-1.3.52.jar
+      - ./build/libs/PreGen-1.0.jar:/data/plugins/PreGen-1.0.jar
