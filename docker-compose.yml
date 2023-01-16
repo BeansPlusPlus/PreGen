@@ -3,7 +3,7 @@ version: "3.3"
 services:
   pregen-test:
     image: itzg/minecraft-server
-    restart: always
+    restart: on-failure
     ports:
       - 25565:25565
     environment:
