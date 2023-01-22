@@ -18,7 +18,7 @@ public class Pregen extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(this, this);
         startNextWorld();
         for (World world : getServer().getWorlds()) {
-            world.getWorldBorder().setSize(WORLD_RADIUS);
+            world.getWorldBorder().setSize(WORLD_RADIUS * 2);
         }
     }
 
