@@ -11,7 +11,7 @@ public class Pregen extends JavaPlugin implements Listener {
 
     private static final String[] WORLDS = {"world", "world_nether"};
     private static final int WORLD_RADIUS = 2850; // use a much lower number for testing. e.g. 256
-    private static final int WORLD_RENDER_RADIUS = 2000; // use a much lower number for testing. e.g. 256
+    private static final int WORLD_RENDER_RADIUS = 2256; // use a much lower number for testing. e.g. 256
 
     private int worldsIndex = 0;
 
